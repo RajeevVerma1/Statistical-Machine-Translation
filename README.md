@@ -11,7 +11,7 @@ Then I have installed Boost,Moses,GIZA++,IRSTLM etc.
 --------------------------------------------------------------------------------------------------------------
 
 Dataset:
-I have a dataset consisting of 14,91,827 parallel engish to hindi corpus dataset. It is kept in my IITPatna folder(under rajeev_intern directory).
+I have a dataset consisting of 14,91,827 parallel engish to hindi corpus dataset.
 I have made a training model of this corpus dataset using run decoder through moses software.
 I have  got the blue score value 46.58 out of 100.
 Now I have used Neural approach to find stack size and beam value of this tested data(test.en.text)
@@ -29,14 +29,14 @@ Optimiser:- Adam
 epochs:- 10
 Mean Square Error:-0.61(stack_data.csv)
 Mean Square Error:-0.43(beam_data.csv)
-I have dataset based on these parameters(beam_data.csv && stack_data.csv) which is saved under(rajeev_intern/set_eng_to_hindi/test/regression)
+I have dataset based on these parameters(beam_data.csv && stack_data.csv)
 I have used sequential model and calculated mean square error. I got mean square error to be approx 0.6 which is quite good.
 Then I have used (test.text) file for training. First I have calculated all the four parameters in this file through python code.
 	for calculating Percentage of comma(comma_percentage.py)
 	for calculating Percentage of long sentences(long_line_percentage.py)
 	for calculating Average words(avg_words_per_line.py)
 	for calculating Percentage of Stop Words(percentage_of_stop_word.py)
-After that I have calculated the value and then through moses software I have given the value of b and s and I got blue score value to be 46.58(rajeev_intern/set_eng_to_hindi/test/regression/bleu_score)
+After that I have calculated the value and then through moses software I have given the value of b and s and I got blue score value to be 46.58
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 2. Through word-vec embedding through glove in python 3.6
 Model used:-Sequential
@@ -47,7 +47,7 @@ epochs:- 10
 metrics:- accuracy
 loss:- categorical_crossentropy
 I have a dataset of 51 files(parellel english-hindi files), each file containing average of 3000 words. I have find max word and min word using python code.
-I have dataset based on corresponding 51 files(beam_data.csv && stack_data.csv) which is saved under(rajeev_intern/set_eng_to_hindi/test/word_vect)
+I have dataset based on corresponding 51 files(beam_data.csv && stack_data.csv)
 I have used glove (embedding length-300) for each word. I have kept 2000 LSTM for each word in the file.
 I have used cuDNNLSTM instead of simple LSTM as cuDNN makes the processing as it uses the external graphics so there in not much load cpu processor.
 I have made the dataset more cleaner by removing extra spaces(remove_linebreak.py) through python code.
@@ -55,7 +55,7 @@ I have calculated loss using categorical crossentropy.
 I run the code  on my system but my system fails because of large number of LSTM used.
 So I have run the code on gpu(on Spyder(Anaconda3)).
 And I got the result and I have tested (test.text) this file through it.
-And finally calculated bleu score value and I got 46.92(rajeev_intern/set_eng_to_hindi/test/word_vect/bleu_score) which is quite good as comparison to other.
+And finally calculated bleu score value and I got 46.92 which is quite good as comparison to other.
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 I have calculate various times such as CPU time,SYS time,USER time,REAL time for each approach.
 --------------------------------------------------------------------------------------------------
